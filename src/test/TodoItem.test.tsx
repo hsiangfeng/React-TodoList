@@ -32,7 +32,6 @@ describe('TodoList 測試', () => {
     />);
 
     const linkElement = screen.getByText(/Hello World/i);
-    console.log(linkElement)
     expect(linkElement).toBeInTheDocument();
   });
 })

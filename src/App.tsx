@@ -49,7 +49,6 @@ function App() {
     const textId = document.getElementById(cache.id) as HTMLInputElement;
     const newData = data.map((item) => {
       if (item.id === cache.id) {
-        console.log(item.isCompleted);
         return {
           ...item,
           text: textId.value,

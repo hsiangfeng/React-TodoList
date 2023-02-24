@@ -35,7 +35,7 @@ export function TodoItem(props: TodoItemProps) {
                 cache.id === item.id ? (
                   <form onSubmit={updateTodo}>
                     <label>
-                      <input id={item.id} type="text" className="w-full" data-id={item.id} defaultValue={item.text} />
+                      <input id={item.id} type="text" className="w-full" data-testid="update" data-id={item.id} defaultValue={item.text} />
                     </label>
                   </form>
                 ) : (
@@ -47,6 +47,7 @@ export function TodoItem(props: TodoItemProps) {
               }
               <div>
                 <Button
+                  testId="edit"
                   dataId={item.id}
                   className="text-xl mr-2"
                   onClick={() => {
@@ -56,6 +57,7 @@ export function TodoItem(props: TodoItemProps) {
                   <Icon path={mdiPen} size={1} />
                 </Button>
                 <Button
+                  testId="delete"
                   dataId={item.id}
                   className="text-xl mr-2"
                   onClick={deleteTodo}

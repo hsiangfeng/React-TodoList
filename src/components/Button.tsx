@@ -4,6 +4,7 @@ interface ButtonStatusProps {
   children: ReactNode;
   active: string;
   state: string;
+  testId?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -30,6 +31,7 @@ interface ButtonProps {
   children: ReactNode;
   dataId: string;
   className: string;
+  testId: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -37,12 +39,13 @@ export function Button(props: ButtonProps) {
   const {
     children,
     dataId,
+    testId,
     className,
     onClick,
   } = props;
 
   return (
-    <button type="button" data-id={dataId} className={className} onClick={onClick}>
+    <button type="button" data-testid={testId} data-id={dataId} className={className} onClick={onClick}>
       {children}
     </button>
   )
