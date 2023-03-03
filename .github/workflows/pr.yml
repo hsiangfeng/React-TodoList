@@ -34,8 +34,8 @@ jobs:
       uses: bahmutov/npm-install@v1
       with:
         useRollingCache: true
-    - name: run unit unittest
-      run: npm run unittest
+    - name: run unit test:unit
+      run: npm run test:unit
     - name: upload Unit Test report
       uses: actions/upload-artifact@v2
       with:
